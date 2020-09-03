@@ -4,7 +4,7 @@ const renderResponse = (res) => {
     if(res.errors){
       responseField.innerHTML = "<p>Sorry, couldn't format your URL.</p><p>Try again.</p>";
     } else {  
-      responseField.innerHTML = `<p>Your shortened url is: </p><p id="pp"> ${res.shortUrl} </p>`;
+      responseField.innerHTML = `<p>Your shortened url is: </p><p id="shortLink"> ${res.shortUrl} </p>`;
     }
   }
   
@@ -36,7 +36,7 @@ const renderResponse = (res) => {
 
   const copyToClipboard = () => {
     /* Get the text field */
-  var copyText = document.getElementById("pp");
+  var copyText = document.getElementById("shortLink");
 
   /* Select the text field */
   copyText.select();
