@@ -95,4 +95,35 @@ header {
     color: #ffffff;
     overflow: auto;
   }
+
+  #copy {
+    width: 110px;
+    height: 45px;
+    border-radius: 3.2px;
+    border: solid 0.8px #ffffff;
+    background-color: inherit;
+    margin-top: 25px;
+    font-family: Roboto;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #ffffff;
+    transition: all .2s ease-in-out;
+    outline: none;
+  }
+
+  #copy:hover {
+    background-color: rgba(87, 89, 93, 0.5);
+    border: solid 0.8px #ffffff;
+    color: #ffffff;
+    cursor: pointer;
+    transform: scale(1.025);
+  }
+
+  #copy:active {
+    background-color: #ffffff;
+    border: solid 0.8px #4a4a4a;
+    color: #1f233e;
+    cursor: pointer;
+  }
   

@@ -4,7 +4,7 @@ const renderResponse = (res) => {
     if(res.errors){
       responseField.innerHTML = "<p>Sorry, couldn't format your URL.</p><p>Try again.</p>";
     } else {  
-      responseField.innerHTML = `<p>Your shortened url is: </p><p> ${res.shortUrl} </p>`;
+      responseField.innerHTML = `<p>Your shortened url is: </p><p id="pp"> ${res.shortUrl} </p>`;
     }
   }
   
@@ -33,4 +33,18 @@ const renderResponse = (res) => {
     // Manipulates responseField to show the returned JSON.
     responseField.innerHTML = `<pre>${rawJson}</pre>`
   }
-  
+
+  const copyToClipboard = () => {
+    /* Get the text field */
+  var copyText = document.getElementById("pp");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  responseField.innerHTML = `<p>Copied the text: </p><p>${copyText.value}</p>`;
+  }
