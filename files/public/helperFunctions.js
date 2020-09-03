@@ -42,9 +42,9 @@ const renderResponse = (res) => {
   copyText.select();
   copyText.setSelectionRange(0, 99999); /*For mobile devices*/
 
-  /* Copy the text inside the text field */
+  /* Copy the text */
   document.execCommand("copy");
 
-  /* Alert the copied text */
+  /* Tell user of the copied text */
   responseField.innerHTML = `<p>Copied the text: </p><p>${copyText.value}</p>`;
   }
