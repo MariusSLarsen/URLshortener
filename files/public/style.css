@@ -47,6 +47,7 @@ header {
     letter-spacing: 0.2px;
     text-align: center;
     color: #ffffff;
+    outline: none;
   }
   
   #shorten {
@@ -62,13 +63,16 @@ header {
     text-align: center;
     color: #ffffff;
     margin-right: -3px;
+    transition: all .2s ease-in-out;
+    outline: none;
   }
   
   #shorten:hover {
-    background-color: #1f233e;
-    border: solid 0.8px #4a4a4a;
-    color: #0087de;
+    background-color: rgba(87, 89, 93, 0.5);
+    border: solid 0.8px #ffffff;
+    color: #ffffff;
     cursor: pointer;
+    transform: scale(1.05);
   }
   
   #shorten:active {
