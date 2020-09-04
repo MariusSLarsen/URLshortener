@@ -34,6 +34,7 @@ const renderResponse = (res) => {
     responseField.innerHTML = `<pre>${rawJson}</pre>`
   }
 
+  // Button to copy the shortened link to clipboard.
   const copyToClipboard = () => {
     /* Get the text field */
   var copyText = document.getElementById("shortLink");
